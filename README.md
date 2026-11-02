@@ -1,7 +1,6 @@
 # Verdeckte Information: Spiele, in denen man den Zustand des anderen nicht sieht – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-verdeckte-information-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-verdeckte-information-demo.streamlit.app/)**
 
 Stück der Linie **regeln-verhandeln** (Arbeitsname; Name, Bereich und Themenfeld werden erst bei der Einbindung in die Website festgelegt) in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Die Demo rechnet **Spiele mit verdeckter Information und Zügen nacheinander**: wie man sie ohne die ausgeschriebene Normalform löst (Sequenzform), wie das Gleichgewicht aussieht (eine ganze Familie; Bluffen ist für die beiden Spieler nicht gleich nötig) und wie schnell die Regret-Verfahren (CFR, CFR⁺, Discounted CFR, externes Sampling) es auf dem Baum finden. **Das Lehrspiel ist Kuhn-Poker** (zwei Spieler, drei Karten), ausdrücklich **kein Logistikspiel**: es ist das kleinste Spiel, an dem sich das Problem exakt zeigen lässt. Nur Reiter 4 („Anmeldung und Kontrolle“) hat einen Logistikbezug und ist ein **konstruiertes Nullsummenmodell**. Karten, Regeln, Einsätze, Kosten und Eigennutz sind **Modellannahmen**, keine Aussagen über echte Spieler oder Betriebe.
 
@@ -350,4 +349,4 @@ Gebaut mit Streamlit, Plotly, NumPy, SciPy und fpdf2.
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Regeln setzen, verhandeln, kontrollieren](https://sebastianhanisch.net/konzepte-verhandeln.html).
