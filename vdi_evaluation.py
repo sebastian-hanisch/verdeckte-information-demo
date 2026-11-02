@@ -491,8 +491,8 @@ def verdict_runs_live(result: dict, steps: int) -> tuple[str, str]:
 
 def verdict_decomposition(tables: dict) -> tuple[str, str]:
     d = decomposition(tables)
-    return "info", (f"Die Steigung kommt von der Abwechslung der Aktualisierung: von {de(d['cfr']['slope'], 2)} (CFR gleichzeitig) auf {de(d['cfr_alt']['slope'], 2)} (abwechselnd). "
-                    f"Kappen der Regrets und lineare Mittelung ändern die Konstante um die Faktoren {de(d['cfr_clip']['factor'], 1)} und {de(d['cfrplus']['factor'], 1)} bei T = 1 000 und die Steigung "
+    return "info", (f"Im Kuhn-Spiel mit drei Karten ändert sich die Steigung des Mittels schon durch die Abwechslung der Aktualisierung: von {de(d['cfr']['slope'], 2)} (CFR gleichzeitig) auf {de(d['cfr_alt']['slope'], 2)} (abwechselnd). "
+                    f"Kappen der Regrets und lineare Mittelung ändern dort vor allem die Konstante, um die Faktoren {de(d['cfr_clip']['factor'], 1)} und {de(d['cfrplus']['factor'], 1)} bei T = 1 000 und die Steigung "
                     f"auf {de(d['cfr_clip']['slope'], 2)} bzw. {de(d['cfrplus']['slope'], 2)} (Kuhn, drei Karten, T = 1 000 bis 300 000).")
 
 
@@ -534,7 +534,7 @@ def verdict_sampling(tables: dict) -> tuple[str, str]:
     text = (f"In Leduc mit {fmt_t(round(nodes))} besuchten Knoten ({fmt_t(t)} Iterationen) hat externes Sampling die Lücke {sci(m['mean'])} ± {sci(m['sd'])}, "
             f"vollständiges CFR {sci(hits['cfr'][1])} (T = {fmt_t(hits['cfr'][0])}) und CFR⁺ {sci(hits['cfrplus'][1])} (T = {fmt_t(hits['cfrplus'][0])}) bei vergleichbarem Aufwand. ")
     if worse:
-        return "warning", "Gegen die Erwartung (Sampling gilt für große Spiele als Vorteil): " + text + "Auf diesem kleinen Baum ist das Sampling nach Knotenbesuchen schlechter als alle drei vollen Verfahren; bei größeren Bäumen ist es nicht gemessen."
+        return "warning", "Gegen die Erwartung (Sampling gilt für große Spiele als Vorteil): " + text + "Auf diesem kleinen Baum ist das Sampling nach Knotenbesuchen bei dieser Schrittzahl schlechter als alle drei vollen Verfahren (bei 1 000 Iterationen ist es von CFR⁺ kaum zu unterscheiden); bei größeren Bäumen ist es nicht gemessen."
     return "info", text + "Das Sampling ist nicht bei allen vollen Verfahren schlechter."
 
 
